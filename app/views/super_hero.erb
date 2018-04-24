@@ -1,1 +1,23 @@
+<html>
+<h1>Create a Team and Heroes!</h1>
+<form action="/teams" method="POST">
+<p>Team Name: <input type="text" name="team[name]" id="team_name_1"></p>
+<p>Team Motto: <input type="text" name="team[motto]" id="team_motto_1"></p>
 
+<h2>Hero 1</h2>
+<p>Hero's Name: <input type="text" name="team[hero][][name]" id="hero1_name"></p>
+<p>Hero's Power: <input type="text" name="team[hero][][power]" id="hero1_power"></p>
+<p>Hero Biography: <input type="text" name="team[hero][][bio]" id="hero1_bio"></p>
+
+<h2>Hero 2</h2>
+<p>Hero's Name: <input type="text" name="team[hero][][name]" id="hero2_name"></p>
+<p>Hero's Power: <input type="text" name="team[hero][][power]" id="hero2_power"></p>
+<p>Hero Biography: <input type="text" name="team[hero][][bio]" id="hero2_bio"></p>
+
+<h2>Hero 3</h2>
+<p>Hero's Name: <input type="text" name="team[hero][][name]" id="hero3_name"></p>
+<p>Hero's Power: <input type="text" name="team[hero][][power]" id="hero3_power"></p>
+<p>Hero Biography: <input type="text" name="team[hero][][bio]" id="hero3_bio"></p>
+<input type="submit" id="submit">
+</form>
+</html>
