@@ -10,14 +10,21 @@ class App < Sinatra::Base
     end
 
     post '/team' do
-      team0 = Team.new(params[:team])
-      member0 = Member.new(params[:team][:members][0])
-      member1 = Member.new(params[:team][:members][1])
-      member2 = Member.new(params[:team][:members][2])
+      @team = Team.new(params[:team])
 
-    #   binding.pry
-
+      params[:team][:members].each do |details|
+        Member.new(details)
+      end
+      @members = Member.all
+      # binding.pry
       erb :"team"
     end
-
+    # post '/team' do
+    #   team0 = Team.new(params[:team])
+    #   member0 = Member.new(params[:team][:members][0])
+    #   member1 = Member.new(params[:team][:members][1])
+    #   member2 = Member.new(params[:team][:members][2])
+    # #   binding.pry
+    #   erb :"team"
+    # end
 end
